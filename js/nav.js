@@ -10,11 +10,3 @@ close.addEventListener('click', () => {
 expand.addEventListener('click', () => {
   nav.classList.add("active"); 
 });
-
-if (window.innerWidth < 750) {
-  nav.classList.remove("active");
-} else {
-  nav.classList.add("active");
-}
-
-
