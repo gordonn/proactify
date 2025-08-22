@@ -8,8 +8,9 @@ nav {
   background-color: var(--nav-color);
   padding: 40px;
   left: -300px;
-  transition: 0.5s;
   z-index: 100;
+  transition: left 0.5s ease;
+  ;
 }
 
 nav.active {

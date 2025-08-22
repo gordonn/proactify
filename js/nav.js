@@ -9,4 +9,3 @@ close.addEventListener('click', () => {
 expand.addEventListener('click', () => {
   nav.classList.add("active");
 });
-
