@@ -1,0 +1,92 @@
+nav {
+  position: relative;
+  height: 100vh;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  background-color: var(--nav-color);
+  padding: 40px;
+  left: -300px;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+nav.active {
+  left: 0;
+}
+
+nav a {
+  display: flex;
+  gap: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.logo {
+  margin-bottom: 40px;
+}
+
+.logo a {
+  gap: 15px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+}
+
+.link {
+  transition-duration: 0.5s;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.link:hover {
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+.link.active {
+  background-color: var(--bg-color);
+}
+
+.link a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.link p {
+  font-size: 18px;
+}
+
+#close {
+  padding: 15px;
+  background-color: var(--bg-color);
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#expand {
+  padding: 15px;
+  background-color: var(--nav-color);
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  cursor: pointer;
+}
