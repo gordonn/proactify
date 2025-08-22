@@ -10,12 +10,17 @@
   <link rel="icon" type="image/x-icon" href="img/squircle.svg" />
   <!--Icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <script>
+    if (window.innerWidth < 750) {
+      nav.classList.remove("active");
+    }
+  </script>
   <script src="js/nav.js" defer></script>
 
 </head>
 
 <body>
-  <nav>
+  <nav class="active">
     <div class="logo">
       <a href="index.html">
         <img src="img/proactify.svg" alt="logo">
