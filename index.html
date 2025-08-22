@@ -4,12 +4,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard &mdash Proactify</title>
+  <title>Dashboard &mdash; Proactify</title>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/nav.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="img/squircle.svg" />
   <!--Icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const nav = document.querySelector('nav');
+
+      // Hide nav on small screens
+      if (window.innerWidth < 750) {
+        nav.classList.remove('active');
+      }
+
+      // Optional: handle window resize dynamically
+      window.addEventListener('resize', () => {
+        if (window.innerWidth < 750) {
+          nav.classList.remove('active');
+        } else {
+          nav.classList.add('active'); // show nav on larger screens
+        }
+      });
+    });
+  </script>
   <script src="js/nav.js" defer></script>
 
 </head>
