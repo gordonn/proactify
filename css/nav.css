@@ -1,6 +1,6 @@
 nav {
   position: relative;
-  height: 100vh;
+  height: 100dvh;
   bottom: 0px;
   top: 0px;
   left: 0px;
@@ -10,7 +10,6 @@ nav {
   left: -300px;
   z-index: 100;
   transition: left 0.5s ease;
-  ;
 }
 
 nav.active {
