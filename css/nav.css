@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #25272A;
+  --nav-color: #17181A;
+  --font-color: #F5F5F5;
+}
+
 nav {
   position: absolute;
   height: 100dvh;
@@ -41,6 +47,8 @@ a {
 
 .logo a {
   gap: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
@@ -72,6 +80,7 @@ a {
 
 .link p {
   font-size: 18px;
+  font-weight: 400;
 }
 
 #close {

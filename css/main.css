@@ -1,3 +1,9 @@
+:root {
+  --bg-color: #25272A;
+  --nav-color: #17181A;
+  --font-color: #F5F5F5;
+}
+
 #expand {
   padding: 15px;
   background-color: var(--nav-color);
@@ -21,8 +27,42 @@ main {
   }
 }
 
+@media(min-width: 1400px) {
+  main {
+    margin: 80px 360px;
+  }
+}
+
 .main-action {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 60px;
+  right: 60px;
+  background-color: var(--nav-color);
+  color: var(--font-color);
+  border: none;
+  outline: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 400;
+}
+
+@media(min-width: 750px) {
+  .main-action {
+    bottom: 60px;
+    right: 180px;
+  }
+}
+
+@media(min-width: 1400px) {
+  .main-action {
+    bottom: 80px;
+    right: 360px;
+  }
 }
