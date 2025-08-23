@@ -19,6 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
+  <script src="js/modal.js" defer></script>
   <script src="js/nav.js" defer></script>
 
 </head>
@@ -85,14 +86,37 @@
 
     <h1>Projects</h1>
 
-    <button class="main-action">
+    <button id="main-action">
       <span class="material-icons-outlined" style="font-size: 26px;">
         add
       </span>
       <p>Add New</p>
     </button>
 
-    <!--Creating Modal Box-->
+    <!--Creating Modal Pop-Up-->
+    <div class="popup-outer">
+      <div class="popup-box">
+        <div class="header">
+          <h2>Add New Project</h2>
+          <div id="exit">
+            <span class="material-icons-outlined">
+              clear
+            </span>
+          </div>
+        </div>
+        <div class="input">
+          <input type="text" id="title" name="title" placeholder="Enter Title">
+          <input type="text" id="description" name="description" placeholder="Enter Description">
+        </div>
+        <button class="save">
+          <span class="material-icons-outlined">
+            save
+          </span>
+          <p>Save</p>
+        </button>
+
+      </div>
+    </div>
 
   </main>
 </body>
