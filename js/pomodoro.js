@@ -1,8 +1,5 @@
-/*
-const body = document.body;
+const workDurationInput = document.getElementById("work-duration");
+const restDurationInput = document.getElementById("rest-duration");
+const timerTime = document.getElementById("timer-time");
 
-// Loading animation:
-window.addEventListener("load", () => {
-  body.classList.add("page-loaded");
-});
-*/
+let workDuration = parseInt(workDurationInput.value);
