@@ -5,7 +5,9 @@
   --popup-overlay: #17181A95;
   --red: #F3654A;
   --blue: #555CF3;
-  --input-bg: #17181A50;
+  --header-bg: #2B363F;
+  --popup-bg: #33404A;
+  --font-faded: #82898F;
 }
 
 .popup-outer {
@@ -28,7 +30,7 @@
 }
 
 .popup-box {
-  background-color: var(--bg-color);
+  background-color: var(--popup-bg);
   height: 350px;
   width: 500px;
   border-radius: 15px;
@@ -36,7 +38,7 @@
 }
 
 .popup-box .header {
-  background-color: var(--nav-color);
+  background-color: var(--header-bg);
   width: 500px;
   border-radius: 15px 15px 0px 0px;
   display: flex;
@@ -79,7 +81,7 @@ input {
   outline: none;
   font-size: 14px;
   border-radius: 15px;
-  background-color: var(--input-bg);
+  background-color: var(--header-bg);
   color: var(--font-color);
 }
 
