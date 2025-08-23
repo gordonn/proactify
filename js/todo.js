@@ -15,25 +15,41 @@ todoAdd.addEventListener('click', () => {
     // Append the newly created list element to the current list  
     listContainer.appendChild(li);
 
-    // Add a delete list item icon dynamically:
+    // Add a delete list item icon to each newly created list item:
     let span = document.createElement("span");
     span.innerHTML = "\u00d7";
     li.appendChild(span);
 
     // Clear the input field after adding the item
     inputBox.value = "";
+    // Whenever we add any task, saveData()
+    saveData();
   }
 });
 
 // Whenever we click anywhere on the list container
 // Check where we have clicked
 listContainer.addEventListener('click', (e) => {
-  // If we click on a list, then we will toggle the check classList property
+  // If the clicked target element is a list, then we will toggle the check classList property
   if(e.target.tagName === "LI") {
     e.target.classList.toggle("checked");
+    saveData();
   }
-  else if(e.target.tagNmae === "SPAN"){
+  // If the clicked target element is a span, then we will delete the parent element
+  else if(e.target.tagName === "SPAN"){
     e.target.parentElement.remove();
+    saveData();
   }
 }, false);
 
+// Save the listContainer contents to local storage:
+function saveData(){
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+// Initialize contents of list everytime website is reloaded with previously saved state
+function showList(){
+  listContainer.innerHTML = localStorage.getItem("data");
+}
+
+showList();
