@@ -1,148 +1,150 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pomodoro Timer &mdash; Proactify</title>
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/nav.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" />
-    <link href="css/pomodoro.css" rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="img/squircle.svg" />
-    <!--Icons-->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-      rel="stylesheet"
-    />
 
-    <!--Fonts-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomodoro Timer &mdash; Proactify</title>
+  <link href="css/main.css" rel="stylesheet" />
+  <link href="css/pomodoro.css" rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="img/squircle.svg" />
+  <!--Icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <script src="js/nav.js" defer></script>
-    <script src="js/pomodoro.js" defer></script>
-  </head>
 
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="index.html">
-          <img src="img/proactify.svg" alt="logo" />
-          <h1>Proactify</h1>
-        </a>
-      </div>
+  <!--Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
 
-      <div class="link">
-        <a href="index.html">
-          <span class="material-icons-outlined" style="font-size: 32px">
-            dashboard
-          </span>
-          <p>Dashboard</p>
-        </a>
-      </div>
+  <script src="js/nav.js" defer></script>
+  <script src="js/pomodoro.js" defer></script>
+</head>
 
-      <div class="link active">
-        <a href="pomodoro.html">
-          <span class="material-icons-outlined" style="font-size: 32px">
-            timer
-          </span>
-          <p>Pomodoro</p>
-        </a>
-      </div>
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/proactify.svg" alt="logo" />
+        <h1>Proactify</h1>
+      </a>
+    </div>
 
-      <div class="link">
-        <a href="projects.html">
-          <span class="material-icons-outlined" style="font-size: 32px">
-            folder
-          </span>
-          <p>Projects</p>
-        </a>
-      </div>
-
-      <div class="link">
-        <a href="todo.html">
-          <span class="material-icons-outlined" style="font-size: 32px">
-            list_alt
-          </span>
-          <p>Todo List</p>
-        </a>
-      </div>
-
-      <div id="close">
-        <span class="material-icons-outlined" style="font-size: 22px">
-          arrow_back_ios
+    <div class="link">
+      <a href="index.html">
+        <span class="material-icons-outlined" style="font-size: 32px">
+          dashboard
         </span>
-      </div>
-    </nav>
+        <p>Dashboard</p>
+      </a>
+    </div>
 
-    <main>
-      <div id="expand">
-        <span class="material-icons-outlined" style="font-size: 22px">
-          arrow_forward_ios
+    <div class="link active">
+      <a href="pomodoro.html">
+        <span class="material-icons-outlined" style="font-size: 32px">
+          timer
         </span>
-      </div>
+        <p>Pomodoro</p>
+      </a>
+    </div>
 
-      <h1>Pomodoro Timer</h1>
+    <div class="link">
+      <a href="projects.html">
+        <span class="material-icons-outlined" style="font-size: 32px">
+          folder
+        </span>
+        <p>Projects</p>
+      </a>
+    </div>
 
-      <div class="pomodoro-timer">
-        <!--
+    <div class="link">
+      <a href="todo.html">
+        <span class="material-icons-outlined" style="font-size: 32px">
+          list_alt
+        </span>
+        <p>Todo List</p>
+      </a>
+    </div>
+
+    <div id="close">
+      <span class="material-icons-outlined" style="font-size: 22px">
+        arrow_back_ios
+      </span>
+    </div>
+  </nav>
+
+  <main>
+    <div id="expand">
+      <span class="material-icons-outlined" style="font-size: 22px">
+        arrow_forward_ios
+      </span>
+    </div>
+
+    <h1>Pomodoro Timer</h1>
+
+    <div class="pomodoro-timer">
+      <!--
         <div id="pomodoro-overlay">
           <img src="img/loading.svg" alt="loading spinner" />
         </div>
 -->
-        <span class="material-icons-outlined" style="font-size: 24px">
-          settings
-        </span>
-        <div id="timer-progress">
-          <svg
-            class="circle-timer"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="50" cy="50" r="45" class="circle-background"></circle>
-            <circle cx="50" cy="50" r="45" class="circle-progress"></circle>
-            <text
-              id="feh-timer-time"
-              x="50"
-              y="50"
-              text-anchor="middle"
-              dy=".3em"
-              font-size="18"
-            >
-              25:00
-            </text>
-            <text
-              id="feh-timer-pause"
-              x="50"
-              y="68"
-              text-anchor="middle"
-              dy=".3em"
-              font-size="7"
-            >
-              Paused
-            </text>
-            <text
-              id="feh-timer-rest"
-              x="50"
-              y="68"
-              text-anchor="middle"
-              dy=".3em"
-              font-size="7"
-            >
-              Rest
-            </text>
-          </svg>
+      <span class="material-icons-outlined settings" style="font-size: 24px">
+        settings
+      </span>
+      <div id="timer-progress">
+        <svg class="circle-timer" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50" cy="50" r="45" class="circle-background"></circle>
+          <circle cx="50" cy="50" r="45" class="circle-progress"></circle>
+          <text id="timer-time" x="50" y="50" text-anchor="middle" dy=".3em" font-size="18">
+            25:00
+          </text>
+          <text id="timer-pause" x="50" y="68" text-anchor="middle" dy=".3em" font-size="7">
+            Paused
+          </text>
+          <text id="timer-rest" x="50" y="68" text-anchor="middle" dy=".3em" font-size="7">
+            Rest
+          </text>
+        </svg>
+      </div>
+      <div id="timer-sessions">
+        <p id="completed-label">Completed work sessions: </p>
+        <p id="completed-sessions">0</p>
+      </div>
+      <div id="timer-functions">
+        <div id="timer-settings">
+          <span class="material-icons settings">
+            close
+          </span>
+          <form id="timer-form">
+            <p class="timer-line">
+              <label for="work-duration">Pomodoro: </label>
+              <input type="number" id="work-duration" value="25" min="1">
+            </p>
+            <p class="timer-line">
+              <label for="rest-duration">Rest: </label>
+              <input type="number" id="rest-duration" value="5" min="1">
+            </p>
+
+          </form>
         </div>
-        <div id="timer-sessions"></div>
-        <div id="timer-functions">
-          <div id="timer-settings"></div>
-          <div id="timer-buttons"></div>
+        <div id="timer-buttons">
+          <button id="pause-btn">
+            <span class="material-icons" style="font-size: 32px">
+              pause
+            </span>
+            </span>
+          </button>
+          <button id="start-btn">
+            <span class="material-icons" style="font-size: 32px">
+              play_arrow
+            </span>
+          </button>
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>

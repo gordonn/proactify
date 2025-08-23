@@ -20,7 +20,7 @@
   position: relative;
 }
 
-/*Overlay:*/
+/*
 #pomodoro-overlay {
   width: 100%;
   height: 100%;
@@ -44,18 +44,17 @@ body.page-loaded #pomodoro-overlay {
   width: 150px;
   height: 150px;
 }
+*/
 
 /*Button*/
-.pomodoro-timer span {
+.pomodoro-timer .settings {
   border-radius: 15px;
   position: absolute;
-  right: 0;
   width: 50px;
   display: flex;
   justify-content: center;
   cursor: pointer;
-  top: 28px;
-  right: 28px;
+  right: 40px;
 }
 
 /*Progress*/
@@ -80,5 +79,71 @@ body.page-loaded #pomodoro-overlay {
 .circle-progress {
   stroke: var(--red);
   stroke-width: 7;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
   fill: none;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+}
+
+#timer-time {
+  fill: var(--font-color);
+}
+
+#timer-pause,
+#timer-rest {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  fill: var(--font-color);
+}
+
+/*Completed sessions:*/
+#timer-sessions {
+  border-radius: 15px;
+  background: var(--input-bg);
+  display: flex;
+  font-weight: 400;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#timer-sessions p {
+  padding: 15px 20px;
+}
+
+p#completed-label {
+  color: var(--font-faded);
+}
+
+/*Timer functions*/
+#timer-functions {
+  height: 145px;
+  position: relative;
+}
+
+/*Settings*/
+
+/*Play / Pause Buttons */
+
+#timer-buttons {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+#timer-buttons button {
+  position: absolute;
+  background-color: var(--red);
+  color: var(--font-color);
+  border: none;
+  outline: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: block;
+  padding-top: 2px;
 }

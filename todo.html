@@ -1,41 +1,38 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Todo List &mdash; Proactify</title>
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/nav.css" rel="stylesheet">
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/todo.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet" />
+  <link href="css/todo.css" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="img/squircle.svg" />
   <!--Icons-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 
   <!--Fonts-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 
   <script src="js/nav.js" defer></script>
   <script src="js/todo.js" defer></script>
-
 </head>
 
 <body>
   <nav>
     <div class="logo">
       <a href="index.html">
-        <img src="img/proactify.svg" alt="logo">
+        <img src="img/proactify.svg" alt="logo" />
         <h1>Proactify</h1>
       </a>
     </div>
 
     <div class="link">
       <a href="index.html">
-        <span class="material-icons-outlined" style="font-size: 32px;">
+        <span class="material-icons-outlined" style="font-size: 32px">
           dashboard
         </span>
         <p>Dashboard</p>
@@ -44,7 +41,7 @@
 
     <div class="link">
       <a href="pomodoro.html">
-        <span class="material-icons-outlined" style="font-size: 32px;">
+        <span class="material-icons-outlined" style="font-size: 32px">
           timer
         </span>
         <p>Pomodoro</p>
@@ -53,7 +50,7 @@
 
     <div class="link">
       <a href="projects.html">
-        <span class="material-icons-outlined" style="font-size: 32px;">
+        <span class="material-icons-outlined" style="font-size: 32px">
           folder
         </span>
         <p>Projects</p>
@@ -62,7 +59,7 @@
 
     <div class="link active">
       <a href="todo.html">
-        <span class="material-icons-outlined" style="font-size: 32px;">
+        <span class="material-icons-outlined" style="font-size: 32px">
           list_alt
         </span>
         <p>Todo List</p>
@@ -70,16 +67,15 @@
     </div>
 
     <div id="close">
-      <span class="material-icons-outlined" style="font-size: 22px;">
+      <span class="material-icons-outlined" style="font-size: 22px">
         arrow_back_ios
       </span>
     </div>
-
   </nav>
 
   <main>
     <div id="expand">
-      <span class="material-icons-outlined" style="font-size: 22px;">
+      <span class="material-icons-outlined" style="font-size: 22px">
         arrow_forward_ios
       </span>
     </div>
@@ -88,13 +84,11 @@
 
     <div class="todo-app">
       <div class="row">
-        <input type="text" id="input-box" placeholder="Add your text">
+        <input type="text" id="input-box" placeholder="Add TODO" />
         <button id="add-todo">Add</button>
       </div>
-      <ul id="list-container">
-      </ul>
+      <ul id="list-container"></ul>
     </div>
-
   </main>
 </body>
 
