@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Projects &mdash; Proactify</title>
+  <title>Todo List &mdash; Proactify</title>
   <link href="css/style.css" rel="stylesheet">
   <link href="css/nav.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-  <link href="css/projects.css" rel="stylesheet">
+  <link href="css/todo.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="img/squircle.svg" />
   <!--Icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -19,7 +19,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
-  <script src="js/modal.js" defer></script>
   <script src="js/nav.js" defer></script>
 
 </head>
@@ -51,7 +50,7 @@
       </a>
     </div>
 
-    <div class="link active">
+    <div class="link">
       <a href="projects.html">
         <span class="material-icons-outlined" style="font-size: 32px;">
           folder
@@ -60,7 +59,7 @@
       </a>
     </div>
 
-    <div class="link">
+    <div class="link active">
       <a href="todo.html">
         <span class="material-icons-outlined" style="font-size: 32px;">
           list_alt
@@ -84,38 +83,10 @@
       </span>
     </div>
 
-    <h1>Projects</h1>
+    <h1>To-Do List</h1>
 
-    <button id="main-action">
-      <span class="material-icons-outlined" style="font-size: 26px;">
-        add
-      </span>
-      <p>Add New</p>
-    </button>
+    <div class="todo-app">
 
-    <!--Creating Modal Pop-Up-->
-    <div class="popup-outer">
-      <div class="popup-box">
-        <div class="header">
-          <h2>Add New Project</h2>
-          <div id="exit">
-            <span class="material-icons-outlined">
-              clear
-            </span>
-          </div>
-        </div>
-        <div class="input">
-          <input type="text" id="title" name="title" placeholder="Enter Title">
-          <input type="text" id="description" name="description" placeholder="Enter Description">
-        </div>
-        <button class="save">
-          <span class="material-icons-outlined">
-            save
-          </span>
-          <p>Save</p>
-        </button>
-
-      </div>
     </div>
 
   </main>

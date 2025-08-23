@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #25272A;
+  --nav-color: #17181A;
+  --font-color: #F5F5F5;
+  --red: #F3654A;
+  --blue: #555CF3;
+}
+
+.todo-app {
+  width: 500px;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--nav-color);
+  margin-top: 60px;
+  border-radius: 15px;
+}
