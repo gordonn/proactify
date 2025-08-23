@@ -1,13 +1,13 @@
 :root {
-  --bg-color: #25272A;
-  --nav-color: #17181A;
-  --font-color: #F5F5F5;
-  --popup-overlay: #17181A95;
-  --red: #F3654A;
-  --blue: #555CF3;
-  --header-bg: #2B363F;
-  --popup-bg: #33404A;
-  --font-faded: #82898F;
+  --bg-color: #25272a;
+  --nav-color: #17181a;
+  --font-color: #f5f5f5;
+  --popup-overlay: #17181a95;
+  --red: #f3654a;
+  --blue: #555cf3;
+  --header-bg: #2b363f;
+  --popup-bg: #33404a;
+  --font-faded: #82898f;
 }
 
 .popup-outer {

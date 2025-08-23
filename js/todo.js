@@ -2,17 +2,16 @@ const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 const todoAdd = document.getElementById("add-todo");
 
-todoAdd.addEventListener('click', () => {
-  if(inputBox.value === ''){
+todoAdd.addEventListener("click", () => {
+  if (inputBox.value === "") {
     alert("You must type something. ");
-  }
-  else {
+  } else {
     // Create a HTML element with the tag name "li":
     // And store it in a li variable
     let li = document.createElement("li");
-    // Set the contents of the list as the value in the input field: 
+    // Set the contents of the list as the value in the input field:
     li.innerHTML = inputBox.value;
-    // Append the newly created list element to the current list  
+    // Append the newly created list element to the current list
     listContainer.appendChild(li);
 
     // Add a delete list item icon to each newly created list item:
@@ -29,26 +28,30 @@ todoAdd.addEventListener('click', () => {
 
 // Whenever we click anywhere on the list container
 // Check where we have clicked
-listContainer.addEventListener('click', (e) => {
-  // If the clicked target element is a list, then we will toggle the check classList property
-  if(e.target.tagName === "LI") {
-    e.target.classList.toggle("checked");
-    saveData();
-  }
-  // If the clicked target element is a span, then we will delete the parent element
-  else if(e.target.tagName === "SPAN"){
-    e.target.parentElement.remove();
-    saveData();
-  }
-}, false);
+listContainer.addEventListener(
+  "click",
+  (e) => {
+    // If the clicked target element is a list, then we will toggle the check classList property
+    if (e.target.tagName === "LI") {
+      e.target.classList.toggle("checked");
+      saveData();
+    }
+    // If the clicked target element is a span, then we will delete the parent element
+    else if (e.target.tagName === "SPAN") {
+      e.target.parentElement.remove();
+      saveData();
+    }
+  },
+  false,
+);
 
 // Save the listContainer contents to local storage:
-function saveData(){
+function saveData() {
   localStorage.setItem("data", listContainer.innerHTML);
 }
 
 // Initialize contents of list everytime website is reloaded with previously saved state
-function showList(){
+function showList() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
 
