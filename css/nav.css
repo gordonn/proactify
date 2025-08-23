@@ -86,16 +86,3 @@ a {
   border-radius: 15px;
   cursor: pointer;
 }
-
-#expand {
-  padding: 15px;
-  background-color: var(--nav-color);
-  position: fixed;
-  left: 30px;
-  bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  cursor: pointer;
-}
