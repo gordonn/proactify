@@ -68,8 +68,8 @@
 #timer-pause,
 #timer-rest {
   opacity: 0;
-  transition: all 0.3s ease-in-out;
-  fill: var(--font-color);
+  fill: var(--font-faded);
+  font-weight: 400;
 }
 
 /*Completed sessions:*/
@@ -210,4 +210,15 @@ body.timer-running #start-btn {
 body.timer-paused #start-btn {
   opacity: 1;
   visibility: visible;
+}
+
+/*Timer text*/
+body.timer-paused:not(.rest-mode) #timer-pause,
+body.rest-mode #timer-text,
+body.rest-mode.timer-paused #timer-pause {
+  opacity: 1;
+}
+
+body.rest-mode-paused #timer-rest {
+  opacity: 0;
 }

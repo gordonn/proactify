@@ -83,6 +83,10 @@ restDurationInput.addEventListener("change", () => {
 
 // Update timer
 function updateTimer() {
+  let playAlarm;
+  const workFinished = new Audio("../tunes/work-done.mp3");
+  const restFinished = new Audio("../tunes/rest-done.mp3");
+
   if (!isPaused) {
     remainingTime--;
     if (remainingTime <= 0) {
@@ -100,9 +104,14 @@ function updateTimer() {
         body.classList.remove("timer-running");
       }
 
+      playAlarm = isWorking ? restFinished : workFinished;
+      playAlarm.play();
+
       isPaused = false;
       body.classList.remove("timer-work-active");
     }
+
+    document.title = timerTime.textContent = formatTime(remainingTime);
 
     updateProgress();
   }
