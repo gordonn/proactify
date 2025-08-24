@@ -53,7 +53,7 @@
 
 .circle-progress {
   stroke: var(--red);
-  stroke-width: 7;
+  stroke-width: 7.5;
   stroke-linecap: round;
   stroke-dasharray: 283;
   fill: none;
@@ -213,12 +213,32 @@ body.timer-paused #start-btn {
 }
 
 /*Timer text*/
-body.timer-paused:not(.rest-mode) #timer-pause,
-body.rest-mode #timer-text,
+
+/* Show pause text when paused and NOT in rest mode */
+body.timer-paused:not(.rest-mode) #timer-pause {
+  opacity: 1;
+}
+
+/* Show pause text when paused DURING rest mode */
 body.rest-mode.timer-paused #timer-pause {
   opacity: 1;
 }
 
-body.rest-mode-paused #timer-rest {
+/* Show regular timer text during rest mode when running */
+body.rest-mode:not(.timer-paused) #timer-rest {
+  opacity: 1;
+}
+
+/* Hide timer-rest by default */
+#timer-rest {
   opacity: 0;
+}
+
+/* Smooth circle progress transition */
+body.timer-running .circle-progress {
+  transition: all 1s linear;
+}
+
+body.rest-mode .circle-progress {
+  stroke: var(--blue);
 }

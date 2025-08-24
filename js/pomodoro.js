@@ -4,6 +4,9 @@ const restDurationInput = document.getElementById("rest-duration");
 const timerTime = document.getElementById("timer-time");
 const circleProgress = document.querySelector(".circle-progress");
 
+const workFinished = new Audio("tunes/work-done.mp3");
+const restFinished = new Audio("tunes/rest-done.mp3");
+
 let workDuration = parseInt(workDurationInput.value) * 60;
 let restDuration = parseInt(restDurationInput.value) * 60;
 let remainingTime = workDuration;
@@ -84,8 +87,6 @@ restDurationInput.addEventListener("change", () => {
 // Update timer
 function updateTimer() {
   let playAlarm;
-  const workFinished = new Audio("../tunes/work-done.mp3");
-  const restFinished = new Audio("../tunes/rest-done.mp3");
 
   if (!isPaused) {
     remainingTime--;
@@ -107,7 +108,7 @@ function updateTimer() {
       playAlarm = isWorking ? restFinished : workFinished;
       playAlarm.play();
 
-      isPaused = false;
+      isPaused = true;
       body.classList.remove("timer-work-active");
     }
 
