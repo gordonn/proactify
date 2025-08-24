@@ -79,7 +79,6 @@
   display: flex;
   font-weight: 400;
   align-items: center;
-  transition: all 0.3s ease-in-out;
 }
 
 #timer-sessions p {
@@ -98,9 +97,8 @@ p#completed-label {
 
 /*Settings*/
 #timer-settings {
-  transition: all 0.3s ease-in-out;
-  /*opacity: 0;
-  visibility: hidden;*/
+  opacity: 0;
+  visibility: hidden;
 }
 
 #close-settings {
@@ -115,7 +113,7 @@ p#completed-label {
 #timer-form {
   border-radius: 15px;
   position: absolute;
-  bottom: -10;
+  bottom: 0;
   left: 0;
   width: 100%;
   background: var(--red-dark);
@@ -178,7 +176,6 @@ input[type="number"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease-in-out;
 }
 
 #timer-buttons button {
@@ -192,4 +189,25 @@ input[type="number"] {
   border-radius: 50%;
   display: block;
   padding-top: 2px;
+}
+
+body.settings-active #timer-settings {
+  opacity: 1;
+  visibility: visible;
+}
+
+body.settings-active #timer-sessions,
+body.settings-active #timer-buttons {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.timer-running #start-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.timer-paused #start-btn {
+  opacity: 1;
+  visibility: visible;
 }
