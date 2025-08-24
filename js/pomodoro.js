@@ -4,7 +4,7 @@ const restDurationInput = document.getElementById("rest-duration");
 const timerTime = document.getElementById("timer-time");
 const circleProgress = document.querySelector(".circle-progress");
 
-const workFinished = new Audio("tunes/work-done.mp3");
+const workFinished = new Audio("tunes/rest-done.mp3");
 const restFinished = new Audio("tunes/rest-done.mp3");
 
 let workDuration = parseInt(workDurationInput.value) * 60;
